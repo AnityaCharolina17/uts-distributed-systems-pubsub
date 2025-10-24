@@ -12,7 +12,6 @@ class DedupStore:
     def __init__(self, db_path: str = "data/dedup.db"):
         self.db_path = db_path
         
-        # Buat folder data jika belum ada
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
         
         # Buat tabel jika belum ada

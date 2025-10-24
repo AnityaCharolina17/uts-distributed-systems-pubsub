@@ -14,13 +14,12 @@ def temp_dedup_store():
     store = DedupStore(db_path)
     yield store
 
-    # Pastikan koneksi database sudah tertutup sebelum dihapus
     import time
     time.sleep(0.1)
     try:
         os.unlink(db_path)
     except PermissionError:
-        pass  # biarkan saja kalau masih dipakai Windows
+        pass 
 
 
 def test_dedup_detects_duplicate(temp_dedup_store):

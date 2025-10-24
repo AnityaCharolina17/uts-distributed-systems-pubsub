@@ -36,7 +36,7 @@ class IdempotentConsumer:
         
         while True:
             try:
-                # Ambil event dari queue (blocking sampai ada event)
+                # Ambil event dari queue 
                 event = await self.queue.get()
                 
                 # Proses event dengan idempotency check
@@ -60,7 +60,7 @@ class IdempotentConsumer:
             self.stats["duplicate_dropped"] += 1
             return
         
-        # Event baru! Mark as processed
+        # Event baru
         success = self.dedup_store.mark_processed(event.topic, event.event_id)
         
         if not success:
@@ -78,8 +78,9 @@ class IdempotentConsumer:
             f"event_id={event.event_id}, source={event.source}"
         )
         
-        # Simulasi processing (misalnya: save to database, send notification, dll)
-        await asyncio.sleep(0.01)  # Simulasi I/O
+        await asyncio.sleep(0)
+
+
     
     def get_events(self, topic: Optional[str] = None) -> List[Event]:
         """Get processed events, optionally filtered by topic"""

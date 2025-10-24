@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  aggregator:
+    build: .
+    container_name: pubsub-aggregator
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data  # Simpan database agar tidak hilang
+    networks:
+      - pubsub-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  publisher:
+    build:
+      context: .
+      dockerfile: Dockerfile.publisher
+    container_name: pubsub-publisher
+    depends_on:
+      - aggregator
+    networks:
+      - pubsub-network
+    environment:
+      - AGGREGATOR_URL=http://aggregator:8080
+    restart: unless-stopped
+
+networks:
+  pubsub-network:
+    driver: bridge

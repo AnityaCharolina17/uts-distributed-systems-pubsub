@@ -139,9 +139,13 @@ Van Steen, M., & Tanenbaum, A. S. (2023). Distributed systems (4th ed., Version 
 ## 🧾 Identitas
 
 Nama: Anitya C. R. Sinaga
+
 NIM: 11231011
+
 Program Studi: Informatika 2023 – Institut Teknologi Kalimantan (ITK)
-Mata Kuliah: Sistem Terdistribusi
+
+Mata Kuliah: Sistem Terdistribusi Kelas A
+
 Dosen Pengampu: Riska Kurniyanto Abdullah, S.T., M.Kom.
 
 ## Catatan Tambahan

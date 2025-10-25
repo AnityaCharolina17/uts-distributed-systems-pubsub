@@ -120,8 +120,7 @@ Konsistensi /stats dan /events
 Stress test kecil (batch event)
 
 ## Video Demo
-
-🎥 YouTube – Demo UTS Sistem Terdistribusi
+YouTube – Demo UTS Sistem Terdistribusi
 
 (Link video )
 
@@ -133,9 +132,9 @@ Isi video:
 4. Tunjukkan hasil /stats dan /events
 5. Restart container → dedup tetap bekerja
 
-## 📚 Referensi
+## Referensi
 
-Tanenbaum, A. S., & Van Steen, M. (2017). Distributed Systems: Principles and Paradigms (2nd ed.). Pearson.
+Van Steen, M., & Tanenbaum, A. S. (2023). Distributed systems (4th ed., Version 4.01).
 
 ## 🧾 Identitas
 
@@ -145,7 +144,7 @@ Program Studi: Informatika 2023 – Institut Teknologi Kalimantan (ITK)
 Mata Kuliah: Sistem Terdistribusi
 Dosen Pengampu: Riska Kurniyanto Abdullah, S.T., M.Kom.
 
-## 💬 Catatan Tambahan
+## Catatan Tambahan
 
 Sistem ini berjalan sepenuhnya lokal di Docker, tanpa jaringan eksternal.
 

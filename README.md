@@ -132,6 +132,10 @@ Isi video:
 4. Tunjukkan hasil /stats dan /events
 5. Restart container → dedup tetap bekerja
 
+## Link Laporan
+https://drive.google.com/file/d/1sDasug0Mff_UnEoH2i-UUk_PJ1-CX__k/view?usp=sharing
+
+
 ## Referensi
 
 Van Steen, M., & Tanenbaum, A. S. (2023). Distributed systems (4th ed., Version 4.01).

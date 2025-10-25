@@ -9,9 +9,9 @@ http://localhost:8080/docs
 
 "mengirim event secara manual lewat Swagger"
 {
-  "topic": "demo-topic",
-  "event_id": "evt_demo_001",
-  "timestamp": "2025-10-24T10:00:00Z",
+  "topic": "demo-topic-2",
+  "event_id": "evt_demo_002",
+  "timestamp": "2025-10-25T09:30:00Z",
   "source": "manual-test",
-  "payload": { "message": "Hello from demo!" }
+  "payload": { "message": "Testing topic change!" }
 }

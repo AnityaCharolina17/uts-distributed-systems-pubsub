@@ -122,7 +122,7 @@ Stress test kecil (batch event)
 ## Video Demo
 YouTube – Demo UTS Sistem Terdistribusi
 
-(Link video )
+https://youtu.be/cdMD3cmt1mE
 
 Isi video:
 

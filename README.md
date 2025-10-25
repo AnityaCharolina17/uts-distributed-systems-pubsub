@@ -1,9 +1,9 @@
-# 📘 UTS Sistem Terdistribusi – Log Aggregator (Pub-Sub with Idempotent Consumer)
+# UTS Sistem Terdistribusi – Log Aggregator (Pub-Sub with Idempotent Consumer)
 
 Proyek ini dibuat untuk memenuhi tugas UTS Sistem Terdistribusi.
 Tema: Pub-Sub Log Aggregator dengan Idempotent Consumer dan Deduplication.
 
-## 👨‍💻 Deskripsi Singkat
+## Deskripsi Singkat
 
 Aplikasi ini merupakan layanan log aggregator berbasis FastAPI (Python) yang:
 
@@ -17,7 +17,7 @@ Menyimpan event unik ke database SQLite yang tahan restart (persistent)
 
 Menyediakan statistik sistem lewat endpoint /stats
 
-## 🧩 Arsitektur Sederhana
+## Arsitektur Sederhana
 [Publisher] → POST /publish → [Aggregator (FastAPI)]
                    ↓
             [asyncio Queue]
@@ -30,7 +30,7 @@ Menyediakan statistik sistem lewat endpoint /stats
 Pattern komunikasi: Publish–Subscribe (local queue)
 Semantik pengiriman: At-least-once delivery
 
-## 🚀 Cara Menjalankan (Build & Run)
+## Cara Menjalankan (Build & Run)
 🔹 1. Build Docker image
 docker build -t uts-aggregator .
 
@@ -43,12 +43,12 @@ Pastikan Docker Desktop sudah berjalan.
 🔹 3. Coba akses API
 curl http://localhost:8080/stats
 
-## 🔧 Endpoint API
+## Endpoint API
 Method	Endpoint	Deskripsi
 POST	/publish	Menerima single event atau batch event
 GET	/events?topic=...	Mengambil daftar event unik yang sudah diproses
 GET	/stats	Menampilkan statistik sistem (received, unique_processed, duplicate_dropped, dll)
-## 📦 Contoh Payload
+## Contoh Payload
 🔹 Single Event
 {
   "topic": "t",
@@ -78,7 +78,7 @@ GET	/stats	Menampilkan statistik sistem (received, unique_processed, duplicate_d
   ]
 }
 
-## 📊 Statistik Contoh
+## Statistik Contoh
 
 Respon dari /stats:
 
@@ -90,7 +90,7 @@ Respon dari /stats:
   "uptime_seconds": 122
 }
 
-## 🧠 Fitur Utama
+## Fitur Utama
 
 Idempotent consumer: event dengan (topic, event_id) sama hanya diproses sekali.
 
@@ -102,7 +102,7 @@ Observability: endpoint /stats memantau performa sistem.
 
 At-least-once semantics: mendukung retry dari publisher.
 
-## 🧪 Unit Test (pytest)
+## Unit Test (pytest)
 
 Jalankan semua test:
 
@@ -121,23 +121,19 @@ Konsistensi /stats dan /events
 
 Stress test kecil (batch event)
 
-## 📹 Video Demo
+## Video Demo
 
 🎥 YouTube – Demo UTS Sistem Terdistribusi
 
-(Link video kamu nanti ditempatkan di sini, 5–8 menit)
+(Link video )
 
 Isi video:
 
-Build Docker image
-
-Jalankan container
-
-Kirim event unik dan duplikat
-
-Tunjukkan hasil /stats dan /events
-
-Restart container → dedup tetap bekerja
+1. Build Docker image
+2. Jalankan container
+3. Kirim event unik dan duplikat
+4. Tunjukkan hasil /stats dan /events
+5. Restart container → dedup tetap bekerja
 
 ## 📚 Referensi
 
@@ -149,7 +145,7 @@ Nama: Anitya C. R. Sinaga
 NIM: 11231011
 Program Studi: Informatika 2023 – Institut Teknologi Kalimantan (ITK)
 Mata Kuliah: Sistem Terdistribusi
-Dosen Pengampu: (isi nama dosenmu di sini)
+Dosen Pengampu: Riska Kurniyanto Abdullah, S.T., M.Kom.
 
 ## 💬 Catatan Tambahan
 

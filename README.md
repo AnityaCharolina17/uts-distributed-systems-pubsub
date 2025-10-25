@@ -136,7 +136,7 @@ Isi video:
 
 Van Steen, M., & Tanenbaum, A. S. (2023). Distributed systems (4th ed., Version 4.01).
 
-## 🧾 Identitas
+## Identitas
 
 Nama: Anitya C. R. Sinaga
 

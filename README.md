@@ -31,16 +31,14 @@ Pattern komunikasi: Publish–Subscribe (local queue)
 Semantik pengiriman: At-least-once delivery
 
 ## Cara Menjalankan (Build & Run)
-🔹 1. Build Docker image
+1. Build Docker image
 docker build -t uts-aggregator .
-
-🔹 2. Jalankan container
+2. Jalankan container
 docker run -p 8080:8080 -v ${PWD}\data:/app\data uts-aggregator
 
 
 Pastikan Docker Desktop sudah berjalan.
-
-🔹 3. Coba akses API
+3. Coba akses API
 curl http://localhost:8080/stats
 
 ## Endpoint API
@@ -49,7 +47,7 @@ POST	/publish	Menerima single event atau batch event
 GET	/events?topic=...	Mengambil daftar event unik yang sudah diproses
 GET	/stats	Menampilkan statistik sistem (received, unique_processed, duplicate_dropped, dll)
 ## Contoh Payload
-🔹 Single Event
+Single Event
 {
   "topic": "t",
   "event_id": "e1",
@@ -58,7 +56,7 @@ GET	/stats	Menampilkan statistik sistem (received, unique_processed, duplicate_d
   "payload": {"msg": "hello"}
 }
 
-🔹 Batch Event
+Batch Event
 {
   "events": [
     {
